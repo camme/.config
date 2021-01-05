@@ -93,6 +93,7 @@ Plug 'xavierchow/vim-sequence-diagram'
 Plug 'jremmen/vim-ripgrep'
 Plug 'zivyangll/git-blame.vim'
 Plug 'idanarye/vim-merginal'
+Plug 'leafgarland/typescript-vim'
 
 " Plug 'sheerun/vim-polyglot'
 "call vundle#end()            " required
@@ -501,3 +502,4 @@ inoremap <Leader><lt> <esc>
 set nowrap
 
 set timeoutlen=1000 ttimeoutlen=0
+nmap <leader>i :CocCommand tsserver.organizeImports<cr>
