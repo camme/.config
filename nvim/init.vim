@@ -94,7 +94,10 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'zivyangll/git-blame.vim'
 Plug 'idanarye/vim-merginal'
 Plug 'leafgarland/typescript-vim'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'Quramy/tsuquyomi'
 " Plug 'sheerun/vim-polyglot'
 "call vundle#end()            " required
 
@@ -129,12 +132,14 @@ set background=dark
 set termguicolors
 
 try
-    " colorscheme moonfly
-    colorscheme desert
-    colorscheme solarized
-    colorscheme dracula
-    colorscheme vitaminonec
     colorscheme tequila-sunrise
+    colorscheme moonfly
+    colorscheme palenight
+    colorscheme solarized
+    colorscheme desert
+    colorscheme vitaminonec
+    colorscheme dracula
+    colorscheme OceanicNext
 
 catch /^Vim\%((\a\+)\)\=:E185/
     " deal with it
@@ -503,3 +508,8 @@ set nowrap
 
 set timeoutlen=1000 ttimeoutlen=0
 nmap <leader>i :CocCommand tsserver.organizeImports<cr>
+nmap <unique> <leader>t <Plug>GenerateDiagram
+let g:generate_diagram_theme_hand = 1
+let g:coc_global_extensions = [ 'coc-tsserver' ]
+
+let g:autohide_types='tags'

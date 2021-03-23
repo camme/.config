@@ -196,8 +196,8 @@ exec feh --bg-scale /home/camilo/Pictures/wallpapers/pexels-billel-moula-540518.
 for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps outer 10
-gaps horizontal 5
-gaps vertical 5
+gaps horizontal 0
+gaps vertical 0
 smart_borders on
 
 exec --no-startup-id compton
@@ -239,3 +239,14 @@ bindsym $mod+Shift+m exec sh ~/.config/scripts/backlight.sh -inc 5000
 bindsym $mod+m exec ~/.config/scripts/backlight.sh -dec 5000
 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+exec --no-startup-id " i3-msg 'workspace 3; append_layout /home/camilo/.config/.i3/workspace-3.json'"
+exec --no-startup-id " i3-msg 'workspace 2; append_layout /home/camilo/.config/.i3/workspace-2.json'"
+exec --no-startup-id " i3-msg 'workspace 1; append_layout /home/camilo/.config/.i3/workspace-1.json'"
+exec --no-startup-id $term
+exec --no-startup-id /usr/bin/slack
+exec --no-startup-id /usr/bin/google-chrome
+exec --no-startup-id /usr/bin/notable
+exec --no-startup-id /snap/bin/flameshot
+exec --no-startup-id /home/camilo/scripts/i3-battery-popup/i3-battery-popup
+exec --no-startup-id xpad
